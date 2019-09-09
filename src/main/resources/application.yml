@@ -1,0 +1,25 @@
+server:
+  port: 8991
+
+
+spring:
+  thymeleaf:
+#    为了看到实时页面展示，关闭缓存
+    cache: false
+
+
+
+#    nettySocketIO相关配置
+nettySocketIO:
+  port: 8990
+  linkedCount: 200
+  allowRequest: true
+  # 协议升级超时时间(毫秒)，默认10秒，HTTP握手升级为ws协议超时时间
+  upgradeTimeOut: 10000
+#  60s内未接受到消息发送超时事件
+  pingTimeOut: 60000
+  pingSpace: 25000
+  #设置交互内容长度
+  contextLength: 2071738
+  #设置每帧处理数据大小（防注入攻击）
+  payloadLength: 2071738
